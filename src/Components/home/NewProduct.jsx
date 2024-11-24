@@ -24,7 +24,7 @@ const NewProduct = () => {
     <SwiperShowProduct>
         {
             data?.map((item,index)=>
-              <SwiperSlide>
+              <SwiperSlide key={index}>
                 <ProductCard item={item} key={index}/>
               </SwiperSlide>
             

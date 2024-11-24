@@ -40,8 +40,8 @@ const ContentCarousel = () => {
         className="mySwiper h-80 object-cover rounded-md mb-4">
 
         {data?.map((item,index)=>
-        <SwiperSlide>
-            <img src={item.download_url} alt="" />
+        <SwiperSlide key={index}>
+            <img src={item.download_url} alt=""/>
         </SwiperSlide>
         )}
         
@@ -61,7 +61,7 @@ const ContentCarousel = () => {
         className="h- object-cover rounded-md">
 
         {data?.map((item,index)=>
-        <SwiperSlide>
+        <SwiperSlide key={index}>
             <img 
             className='rounded-md'
             src={item.download_url} alt="" />
