@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cart from "../Pages/Cart";
 import Home from "../Pages/Home";
 import Shop from "../Pages/Shop";
-import History from "../Pages/User/history";
+import History from "../Pages/User/History";
 import Checkout from "../Pages/Checkout";
 import Login from "../Pages/Authen/Login";
 import Register from "../Pages/Authen/Register";
@@ -13,7 +13,7 @@ import Dashboard from "../Pages/Admin/Dashboard";
 import Category from "../Pages/Admin/Category";
 import Manage from "../Pages/Admin/Manage";
 import LayoutUser from "../Layouts/LayoutUser";
-import HomeUser from "../Pages/User/HomeUser"
+import HomeUser from "../Pages/User/HomeUser";
 import ProtectRouteUser from "./ProtectRouteUser";
 import ProtectRouteAdmin from "./ProtectRouteAdmin";
 import Product from "../Pages/Admin/Product";
@@ -37,28 +37,26 @@ const router = createBrowserRouter([
   {
     path: "admin",
     //element: <LayoutAdmin />,
-    element:<ProtectRouteAdmin element={<LayoutAdmin/>}/>,
+    element: <ProtectRouteAdmin element={<LayoutAdmin />} />,
     children: [
       { index: true, element: <Dashboard /> },
       { path: "category", element: <Category /> },
-      { path:"product",element:<Product/>},
-      { path:"product/:id",element:<EditProduct/>},
+      { path: "product", element: <Product /> },
+      { path: "product/:id", element: <EditProduct /> },
       { path: "manage", element: <Manage /> },
-      { path: "order", element: <ManageOrders/>  }
-     
+      { path: "order", element: <ManageOrders /> },
     ],
   },
   {
     path: "user",
     //element: <LayoutUser />,
-    element:<ProtectRouteUser element={<LayoutUser/>}/>,
+    element: <ProtectRouteUser element={<LayoutUser />} />,
     children: [
       { index: true, element: <HomeUser /> },
-      { path:'payment', element: <Payment /> },
-      { path: "history", element: <History /> }
+      { path: "payment", element: <Payment /> },
+      { path: "history", element: <History /> },
     ],
-  }
-
+  },
 ]);
 
 const Approutes = () => {
