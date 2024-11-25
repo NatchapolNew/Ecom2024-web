@@ -3,12 +3,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
-import { array, z } from "zod";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import zxcvbn from "zxcvbn";
 import { useNavigate } from "react-router-dom";
-import { span } from "motion/react-client";
-
 const registerSchema = z
   .object({
     email: z.string().email({ message: "Invalid Email!!!" }),
