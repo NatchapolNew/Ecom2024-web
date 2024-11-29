@@ -13,7 +13,7 @@ const Bestseller = () => {
   },[])
 
   const loadData = ()=>{
-    listProductBy('sold','desc',12)
+    listProductBy('sold','desc',6)
     .then((res)=>
         setData(res.data)
     )
