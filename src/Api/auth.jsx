@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const currentUser = async(token)=> await axios.post('https://ecom2024-api-seven.vercel.app/api/current-user',
+export const currentUser = async(token)=> await axios.post('http://localhost:5001/api/current-user',
     {},{
         headers:{
             Authorization:`Bearer ${token}`
@@ -10,7 +10,7 @@ export const currentUser = async(token)=> await axios.post('https://ecom2024-api
 
 export const currentAdmin = async (token)=>{
 
-    return  await axios.post('https://ecom2024-api-seven.vercel.app/api/current-admin',{},{
+    return  await axios.post('http://localhost:5001/api/current-admin',{},{
         headers:{
             Authorization:`Bearer ${token}`
         }
