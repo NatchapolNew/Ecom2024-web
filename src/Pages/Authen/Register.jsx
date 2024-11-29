@@ -50,7 +50,7 @@ const Register = () => {
 
     try {
       //code
-      const res = await axios.post("https://ecom2024-api-seven.vercel.app/api/register", data);
+      const res = await axios.post("http://localhost:5001/api/register", data);
 
       console.log(res);
       toast.success(res.data);
