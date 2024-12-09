@@ -1,13 +1,16 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Navigate, NavLink } from "react-router-dom";
 import { LayoutDashboard,UserRoundCog,List,Package,ListOrdered,LogOut } from 'lucide-react';
+import useEcomStore from "../../Store/ecom-store";
+
 
 const SidebarAdmin = () => {
+  const logout = useEcomStore((state)=>state.logout)
   return (
     <div className="bg-gray-800 w-64 text-gray-100 flex flex-col h-screen">
 
       <div className="h-24 bg-gray-900 flex items-center justify-center text-2xl font-bold">
-        Admin Panel
+       <NavLink to={'/'}> Admin Panel </NavLink>
         </div>
 
       <nav className="flex-1 px-4 py-4 space-y-2">
@@ -64,8 +67,8 @@ const SidebarAdmin = () => {
       </nav>
 
       <div>
-      <NavLink 
-        to={'product'}
+      <NavLink onClick={()=>logout()}
+        to={'/'}
         className={({isActive})=>
             isActive? 'bg-gray-900 rounded-md text-white flex items-center'
             :'text-gray-300 px-4 py-2 hover:bg-gray-700 hover:text-white rounded flex items-center'

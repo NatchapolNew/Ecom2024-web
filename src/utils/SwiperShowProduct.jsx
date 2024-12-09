@@ -15,7 +15,7 @@ const SwiperShowProduct = ({ children }) => {
     <div>
       <Swiper
         slidesPerView={5}
-        spaceBetween={10}
+        spaceBetween={5}
         pagination={true}
         navigation={true}
         autoplay={{
@@ -41,11 +41,11 @@ const SwiperShowProduct = ({ children }) => {
           },
           1280: {
             slidesPerView: 6,
-            spaceBetween: 50,
+            spaceBetween: 5,
           },
         }}
         modules={[Pagination, Autoplay, Navigation]}
-        className="h- object-cover rounded-md"
+        className="object-cover rounded-md"
       >
         {children}
       </Swiper>

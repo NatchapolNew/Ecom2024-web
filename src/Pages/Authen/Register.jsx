@@ -12,6 +12,7 @@ const registerSchema = z
     email: z.string().email({ message: "Invalid Email!!!" }),
     password: z.string().min(8, { message: "Password ต้องมากกว่า 8 ตัวอักษร" }),
     confirmPassword: z.string(),
+    name: z.string()
   })
   .refine((data) => data.password === data.confirmPassword, {
     message: "Password is not match!!!",
@@ -74,6 +75,18 @@ const Register = () => {
 
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="space-y-4">
+
+          <div>
+              <input
+                {...register("name")}
+                placeholder="ชื่อ"
+                className="border w-full px-3 py-2 rounded
+                  focus:outline-none focus:ring-2 focus:ring-blue-500
+                  focus:border-transparent
+                  "
+              />
+            </div>
+
             <div>
               <input
                 {...register("email")}

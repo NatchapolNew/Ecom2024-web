@@ -14,7 +14,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="bg-white shadow-md ">
       <div className="mx-auto px-4">
         <div className="flex justify-between h-16">
           <div className="flex items-center gap-6">
@@ -75,8 +75,8 @@ const Navbar = () => {
                 className="w-8 h-8"
                 src="https://cdn.iconscout.com/icon/free/png-512/free-avatar-icon-download-in-svg-png-gif-file-formats--user-business-man-avatars-flat-icons-pack-people-456324.png?f=webp&w=256" alt="" />
                 <ChevronDown />
-              </button>
-              
+              </button>           
+
               {
               isOpen && (
               <div className="absolute top-16 bg-white shadow-md z-50">

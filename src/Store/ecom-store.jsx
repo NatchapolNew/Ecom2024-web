@@ -4,6 +4,9 @@ import { persist, createJSONStorage } from "zustand/middleware";
 import { listProduct, searchFilters } from "../Api/Product";
 import { listCategory } from "../Api/Category";
 import _ from "lodash";
+import { Navigate } from "react-router-dom";
+
+
 const ecomstore = (set, get) => ({
   user: null,
   token: null,

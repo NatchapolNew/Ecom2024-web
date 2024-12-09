@@ -72,7 +72,7 @@ const TableOrdes = () => {
               return (
                 <tr key={index} className="border">
                   <td className="text-center">{index + 1}</td>
-                  <td>
+                  <td className="text-center">
                     <p>{item.orderedBy.email}</p>
                     <p>{item.orderedBy.address}</p>
                   </td>
@@ -82,8 +82,9 @@ const TableOrdes = () => {
                   </td>
 
 
-                  <td className="px-2 py-4">
-                    {item.products?.map((product, index) => (
+                  <td className="px-5 py-4 ">
+                    
+                      {item.products?.map((product, index) => (
                       <li key={index}>
                         {product.product.title}
                         {"  "}
@@ -92,17 +93,19 @@ const TableOrdes = () => {
                         </span>
                       </li>
                     ))}
+                  
+                    
                   </td>
 
-                  <td>{numberFormat(item.cartTotal)}</td>
+                  <td className="text-center">{numberFormat(item.cartTotal)}</td>
 
-                  <td>
+                  <td className="text-center">
                     <span className={`${getStatusColor(item.orderStatus)} px-2 py-1 rounded-full`}>
                       {item.orderStatus}{" "}
                     </span>
                   </td>
 
-                  <td>
+                  <td className="text-center">
                     <select
                       value={item.orderStatus}
                       onChange={(e) =>

@@ -78,6 +78,7 @@ const SummaryCard = () => {
             >
               Save Address
             </button>
+            {address}
           </div>
         </div>
 
